@@ -1,11 +1,11 @@
 :root{
-    --primary-color: #335384;
-    --secondary-color: #5ba7d1;
-    --third-color: #93c2f5;
-    --section-color: #5ba7d1;
+    --primary-color: #373741;
+    --secondary-color: #ff9d8e;
+    --third-color: #fff5b0;
+    --section-color: #ff9d8e;
     --text-primary: #fff;
     --text-secondary: #000;
-    --background-desktop: url("https://images.unsplash.com/photo-1549154425-7b519f2b92d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1471&q=80");
+    --background-desktop: var(--third-color);
     --name-height: 64px;
     font-size: 15px;
 }
@@ -66,9 +66,7 @@ img{
     position: sticky;
     top: 0;
     display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: center;
-    place-items: end;
+    text-align: center;
 }
 #name i{
     padding-left: 0.5rem;
@@ -215,7 +213,7 @@ header:hover{
     max-width: 75%;
 }
 .col-2.ref{
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 75%;
 }
 .col-3{
     display: grid;
@@ -326,10 +324,11 @@ header:hover{
     }
     body{
         min-height: unset;
-        background-image: var(--background-desktop);
+        background-color: var(--third-color);
+        /* background-image: var(--background-desktop);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
     }
     .large-only{
         display: none;
@@ -347,6 +346,9 @@ header:hover{
         "main-img main"
         "intro main";
     }
+    #main-container{
+        border-radius: 1em;
+    }
     #name{
         position: fixed;
         top: 0;
@@ -361,7 +363,7 @@ header:hover{
     }
     #intro{
         font-size: 0.9rem;
-        padding: 2rem 10%;
+        padding: 1rem 10%;
     }
     #main-content.focused{
         height: 100%;
